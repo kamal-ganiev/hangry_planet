@@ -1,0 +1,48 @@
+.contact {
+  box-sizing: border-box;
+  padding: 100px 70px;
+}
+
+.contact__title {
+  margin: 0 auto 60px;
+  width: 100%;
+  text-align: center;
+  color: #eb8046;
+
+  font-size: 3em;
+}
+
+.contact__description {
+  margin: 0 auto 90px;
+  width: 50%;
+  text-align: center;
+
+  font-size: 1.5em;
+}
+
+.contact__buttons {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 1.25em;
+}
+
+.contact__button {
+  color: black;
+  text-decoration: none;
+  width: 350px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5em;
+
+  border-top: solid #eb8046 2px;
+  border-bottom: solid #eb8046 2px;
+}
