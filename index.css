@@ -2,3 +2,7 @@
 @import url("./vendors/normalize.css");
 
 @import url("./blocks/index.css");
+
+html {
+  scroll-behavior: smooth;
+}
