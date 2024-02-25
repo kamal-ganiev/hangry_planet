@@ -4,3 +4,10 @@
   font-weight: 400;
   src: url("../font/Anton-Regular.ttf");
 }
+
+@font-face {
+  font-family: "Patrick Hand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/PatrickHandSC-Regular.ttf");
+}
