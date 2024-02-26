@@ -49,10 +49,21 @@
   transition: 0.3s;
 }
 
-.contact__button:hover {
-  text-decoration: underline;
+.contact__button-text::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  display: block;
+  background-color: black;
+  transition: 0.3s;
+}
 
+.contact__button:hover {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 
   transform: scale(1.05);
+}
+
+.contact__button:hover .contact__button-text::after {
+  width: 100%;
 }

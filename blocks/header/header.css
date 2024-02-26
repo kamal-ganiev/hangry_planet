@@ -63,5 +63,8 @@
 
 .header__title_disappear {
   opacity: 0;
-  user-select: none;
+}
+
+.header__title_disable {
+  display: none;
 }

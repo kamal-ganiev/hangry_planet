@@ -71,8 +71,8 @@
       </div>
       <div class="about__content">
         <ul class="about__list">
-          <li class="about__image" />
-          <li class="about__image" />
+          <li class="about__image"></li>
+          <li class="about__image"></li>
         </ul>
       </div>
     </section>
@@ -81,8 +81,10 @@
       <h2 class="menu__title">Try out our Menu</h2>
       <ul class="menu__nav">
         <li class="menu__nav-item">
-          <div class="menu__nav-checkbox-checked">
-            <div class="menu__nav-checkbox-inner_visible"></div>
+          <div class="menu__nav-checkbox menu__nav-checkbox-checked">
+            <div
+              class="menu__nav-checkbox-inner menu__nav-checkbox-inner_visible"
+            ></div>
           </div>
           <p class="menu__nav-text">Burgers</p>
         </li>
@@ -310,9 +312,13 @@
         business lunches and baby showers!
       </p>
       <div class="contact__buttons">
-        <a class="contact__email contact__button" href="#">Email Us</a>
+        <a class="contact__email contact__button" href="#"
+          ><span class="contact__button-text">Email Us</span></a
+        >
         <p class="contact__spacer">or</p>
-        <a class="contact__form contact__button" href="#">Fill Up the Form</a>
+        <a class="contact__form contact__button" href="#"
+          ><span class="contact__button-text">Fill Up the Form</span></a
+        >
       </div>
     </section>
 
@@ -358,4 +364,5 @@
 
   <script type="module" src="./scripts/script.js"></script>
   <script type="module" src="./scripts/utils.js"></script>
+  <script type="module" src="./scripts/constantArrayLists.js"></script>
 </html>
