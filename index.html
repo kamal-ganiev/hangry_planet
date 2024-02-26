@@ -17,38 +17,42 @@
     <title>Hangry Planet</title>
   </head>
   <body class="page">
-    <header class="header">
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__item" href="#about">About</a>
-          </li>
-          <li class="nav__item"><a class="nav__item" href="#menu">Menu</a></li>
-        </ul>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__item" href="#contact">Contact</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__item" href="#calendar">Calendar</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__logo-contaner">
-        <object
-          class="header__logo_animated"
-          type="image/svg+xml"
-          data="./images/animated_logo.svg"
-        >
-          <!-- <img
-            class="header__logo"
-            src="./images/animated_logo.svg"
-            alt="Hangry Planet Logo"
-          /> -->
-        </object>
-        <h1 class="header__title">First Ever UFO Burgers in O-H-I-O!</h1>
-      </div>
-    </header>
+    <section class="header__background">
+      <header class="header">
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__item" href="#about">About</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item" href="#menu">Menu</a>
+            </li>
+          </ul>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__item" href="#contact">Contact</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__item" href="#calendar">Calendar</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__logo-contaner">
+          <object
+            class="header__logo_animated"
+            type="image/svg+xml"
+            data="./images/animated_logo.svg"
+          >
+            <!-- <img
+              class="header__logo"
+              src="./images/animated_logo.svg"
+              alt="Hangry Planet Logo"
+            /> -->
+          </object>
+          <h1 class="header__title">First Ever UFO Burgers in O-H-I-O!</h1>
+        </div>
+      </header>
+    </section>
 
     <section class="about" id="about">
       <div class="about__text">
@@ -351,4 +355,7 @@
       </div>
     </footer>
   </body>
+
+  <script type="module" src="./scripts/script.js"></script>
+  <script type="module" src="./scripts/utils.js"></script>
 </html>
