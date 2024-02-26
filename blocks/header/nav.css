@@ -18,4 +18,11 @@
 
   text-decoration: none;
   color: white;
+
+  transition: 0.1s;
+}
+
+.nav__item:hover {
+  font-size: 1.1em;
+  transform-origin: center;
 }

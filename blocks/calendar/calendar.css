@@ -81,6 +81,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.calendar__event:hover {
+  min-height: 95px;
+
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .calendar__event-address,

@@ -45,4 +45,14 @@
 
   border-top: solid #eb8046 2px;
   border-bottom: solid #eb8046 2px;
+
+  transition: 0.3s;
+}
+
+.contact__button:hover {
+  text-decoration: underline;
+
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
+  transform: scale(1.05);
 }
