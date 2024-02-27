@@ -91,52 +91,192 @@ const listOfEvents = [
   {
     id: 1,
     month: "Jan",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-01-10",
+        eventAddress: "123 Main Street",
+        eventName: "Winter Festival",
+      },
+      {
+        eventDate: "2024-01-20",
+        eventAddress: "456 Elm Street",
+        eventName: "Art Exhibition",
+      },
+    ],
   },
   {
     id: 2,
     month: "Feb",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-02-05",
+        eventAddress: "789 Oak Street",
+        eventName: "Valentine's Ball",
+      },
+      {
+        eventDate: "2024-02-15",
+        eventAddress: "101 Pine Street",
+        eventName: "Science Fair",
+      },
+      {
+        eventDate: "2024-02-28",
+        eventAddress: "202 Maple Street",
+        eventName: "Film Festival",
+      },
+    ],
   },
   {
     id: 3,
     month: "Mar",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-03-08",
+        eventAddress: "303 Cedar Street",
+        eventName: "Food Truck Rally",
+      },
+      {
+        eventDate: "2024-03-18",
+        eventAddress: "404 Birch Street",
+        eventName: "St. Patrick's Day Parade",
+      },
+    ],
   },
   {
     id: 4,
     month: "Apr",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-04-07",
+        eventAddress: "505 Walnut Street",
+        eventName: "Spring Garden Show",
+      },
+      {
+        eventDate: "2024-04-22",
+        eventAddress: "606 Chestnut Street",
+        eventName: "Earth Day Celebration",
+      },
+      {
+        eventDate: "2024-04-30",
+        eventAddress: "707 Sycamore Street",
+        eventName: "Music Festival",
+      },
+    ],
   },
   {
     id: 5,
     month: "May",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-05-12",
+        eventAddress: "808 Spruce Street",
+        eventName: "Mother's Day Brunch",
+      },
+      {
+        eventDate: "2024-05-25",
+        eventAddress: "909 Pine Street",
+        eventName: "Memorial Day Parade",
+      },
+    ],
   },
   {
     id: 6,
     month: "Jun",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-06-08",
+        eventAddress: "1010 Cedar Street",
+        eventName: "Summer Concert Series",
+      },
+      {
+        eventDate: "2024-06-20",
+        eventAddress: "1111 Birch Street",
+        eventName: "Father's Day BBQ",
+      },
+      {
+        eventDate: "2024-06-28",
+        eventAddress: "1212 Maple Street",
+        eventName: "Outdoor Movie Night",
+      },
+    ],
   },
   {
     id: 7,
     month: "Jul",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-07-04",
+        eventAddress: "1313 Oak Street",
+        eventName: "Independence Day Fireworks",
+      },
+      {
+        eventDate: "2024-07-15",
+        eventAddress: "1414 Elm Street",
+        eventName: "Food and Wine Festival",
+      },
+      {
+        eventDate: "2024-07-28",
+        eventAddress: "1515 Main Street",
+        eventName: "Summer Block Party",
+      },
+    ],
   },
   {
     id: 8,
     month: "Aug",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-08-10",
+        eventAddress: "1616 Walnut Street",
+        eventName: "Back to School Fair",
+      },
+      {
+        eventDate: "2024-08-22",
+        eventAddress: "1717 Sycamore Street",
+        eventName: "Community Picnic",
+      },
+    ],
   },
   {
     id: 9,
     month: "Sep",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-09-05",
+        eventAddress: "1818 Spruce Street",
+        eventName: "Labor Day Parade",
+      },
+      {
+        eventDate: "2024-09-18",
+        eventAddress: "1919 Pine Street",
+        eventName: "Autumn Harvest Festival",
+      },
+    ],
   },
   {
     id: 10,
     month: "Oct",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-10-10",
+        eventAddress: "2020 Cedar Street",
+        eventName: "Haunted House Tour",
+      },
+      {
+        eventDate: "2024-10-15",
+        eventAddress: "2424 Elm Street",
+        eventName: "Thanksgiving Parade",
+      },
+      {
+        eventDate: "2024-10-24",
+        eventAddress: "2121 Birch Street",
+        eventName: "Pumpkin Carving Contest",
+      },
+      {
+        eventDate: "2024-10-31",
+        eventAddress: "2222 Maple Street",
+        eventName: "Halloween Costume Party",
+      },
+    ],
   },
   {
     id: 11,
@@ -146,7 +286,28 @@ const listOfEvents = [
   {
     id: 12,
     month: "Dec",
-    data: [],
+    data: [
+      {
+        eventDate: "2024-12-08",
+        eventAddress: "2525 Walnut Street",
+        eventName: "Holiday Market",
+      },
+      {
+        eventDate: "2024-12-20",
+        eventAddress: "2626 Sycamore Street",
+        eventName: "Winter Wonderland Festival",
+      },
+      {
+        eventDate: "2024-12-26",
+        eventAddress: "2323 Oak Street",
+        eventName: "Veterans Day Ceremony",
+      },
+      {
+        eventDate: "2024-12-31",
+        eventAddress: "2727 Spruce Street",
+        eventName: "New Year's Eve Ball",
+      },
+    ],
   },
 ];
 

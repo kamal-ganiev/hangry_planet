@@ -124,3 +124,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.calendar__message {
+  width: 100%;
+  margin: 25px auto;
+  text-align: center;
+  font-size: 1.5em;
+}

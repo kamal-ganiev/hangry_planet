@@ -71,8 +71,6 @@ function toggleSwitch(list, target) {
     );
   });
 
-  console.log(target);
-
   target.children[0].classList.add("menu__nav-checkbox-checked");
   target.children[0].children[0].classList.add(
     "menu__nav-checkbox-inner_visible"
@@ -116,6 +114,34 @@ const eventForward = month.querySelector(".calendar__month-switch-f");
 
 monthName.textContent = currentMonth;
 
+const calendarList = document.querySelector(".calendar__list");
+const calendarTemplate = document.querySelector(".calendar__template").content;
+
+function switchCalendar(list) {
+  list.forEach((item) => {
+    const newCard = calendarTemplate.cloneNode(true);
+
+    const cardName = newCard.querySelector(".calendar__event-name");
+    const cardAddress = newCard.querySelector(".calendar__event-address");
+    const cardDate = newCard.querySelector(".calendar__event-date");
+
+    cardName.textContent = item.eventName;
+    cardDate.textContent = item.eventDate;
+    cardAddress.textContent = item.eventAddress;
+
+    calendarList.appendChild(newCard);
+  });
+}
+
+switchCalendar(listOfEvents[monthNum].data);
+
+if (listOfEvents[monthNum].data.length === 0) {
+  calendarList.innerHTML = `
+        <li class="calendar__message">
+            There's no events for this month &#128542;
+        </li>`;
+}
+
 if (monthNum === 0) {
   eventBack.style = "display: none";
   monthNum = 0;
@@ -132,6 +158,16 @@ eventBack.addEventListener("click", () => {
 
   monthName.textContent = listOfEvents[monthNum].month;
 
+  calendarList.innerHTML = "";
+  switchCalendar(listOfEvents[monthNum].data);
+
+  if (listOfEvents[monthNum].data.length === 0) {
+    calendarList.innerHTML = `
+        <li class="calendar__message">
+            There's no events for this month &#128542;
+        </li>`;
+  }
+
   if (monthNum === 0) {
     eventBack.style = "display: none";
   } else {
@@ -144,6 +180,16 @@ eventForward.addEventListener("click", () => {
   monthNum += 1;
 
   monthName.textContent = listOfEvents[monthNum].month;
+
+  calendarList.innerHTML = "";
+  switchCalendar(listOfEvents[monthNum].data);
+
+  if (listOfEvents[monthNum].data.length === 0) {
+    calendarList.innerHTML = `
+        <li class="calendar__message">
+            There's no events for this month &#128542;
+        </li>`;
+  }
 
   if (monthNum === 11) {
     eventForward.style = "display: none";
