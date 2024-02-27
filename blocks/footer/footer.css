@@ -60,11 +60,12 @@
 
   display: flex;
   flex-direction: column;
+  align-items: end;
   gap: 15px;
 }
 
 .footer__contact-info {
-  transition: 0.2s;
+  width: fit-content;
 }
 
 .footer__contact-link {
@@ -72,10 +73,28 @@
   text-decoration: none;
 }
 
-.footer__contact-info:hover {
-  transform: scale(1.1);
+.footer__social-text::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: white;
+  transition: 0.3s;
 }
 
-.footer__social-content:hover .footer__social-link {
-  transform: scale(1.1);
+.footer__contact-link::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #eb8046;
+  transition: 0.3s;
+}
+
+.footer__contact-info:hover .footer__contact-link::after {
+  width: 100%;
+}
+
+.footer__social-content:hover .footer__social-text::after {
+  width: 100%;
 }

@@ -19,11 +19,17 @@
 
   text-decoration: none;
   color: white;
-
-  transition: 0.1s;
 }
 
-.nav__item:hover {
-  font-size: 1.1em;
-  transform-origin: center;
+.nav__item::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: white;
+  transition: 0.3s;
+}
+
+.nav__item:hover .nav__item::after {
+  width: 100%;
 }
