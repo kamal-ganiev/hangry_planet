@@ -27,6 +27,15 @@
   gap: 50px;
 }
 
+.menu__nav-text,
+.menu__nav-checkbox,
+.menu__nav-checkbox-checked,
+.menu__nav-checkbox-inner,
+.menu__nav-checkbox-inner_visible,
+.menu__nav-text::after {
+  pointer-events: none;
+}
+
 .menu__nav-item {
   display: flex;
   gap: 10px;
@@ -53,11 +62,13 @@
 }
 
 .menu__nav-checkbox-inner {
-  display: none;
+  opacity: 0;
+
+  transition: 0.3s;
 }
 
 .menu__nav-checkbox-inner_visible {
-  display: block;
+  opacity: 1;
   width: 20px;
   height: 20px;
   background-color: #eb8046;
@@ -113,6 +124,12 @@
   width: 630px;
   display: flex;
   flex-direction: column;
+}
+
+.menu__item-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .menu__item-header {

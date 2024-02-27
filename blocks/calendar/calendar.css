@@ -69,6 +69,23 @@
   text-align: center;
 }
 
+.calendar__month-switch-b,
+.calendar__month-switch-f {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+
+  transition: 0.3s;
+}
+
+.calendar__month-switch-b:hover {
+  transform: translateX(-5px);
+}
+
+.calendar__month-switch-f:hover {
+  transform: translateX(5px);
+}
+
 .calendar__event {
   box-sizing: border-box;
   padding: 15px;

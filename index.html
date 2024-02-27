@@ -102,88 +102,7 @@
         </li>
       </ul>
       <div class="menu__content">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <div class="menu__item-header">
-              <h3 class="menu__item-name">The Big Bang</h3>
-              <p class="menu__item-price">$ 13</p>
-            </div>
-            <div class="menu__spacer"></div>
-            <div class="menu__item-footer">
-              <p class="menu__item-description">
-                Pulled Beef | Lettuce | Tomato | Onion | Pickle | Cheese
-              </p>
-            </div>
-          </li>
-          <li class="menu__item">
-            <div class="menu__item-header">
-              <h3 class="menu__item-name">Galaxy Beef-burger</h3>
-              <p class="menu__item-price">$ 11</p>
-            </div>
-            <div class="menu__spacer"></div>
-            <div class="menu__item-footer">
-              <p class="menu__item-description">
-                Beef patty | Lettuce | Tomato | Onion | Pickle | Cheese
-              </p>
-            </div>
-          </li>
-          <li class="menu__item">
-            <div class="menu__item-header">
-              <h3 class="menu__item-name">Cosmo Chicken</h3>
-              <p class="menu__item-price">$ 10</p>
-            </div>
-            <div class="menu__spacer"></div>
-            <div class="menu__item-footer">
-              <p class="menu__item-description">
-                Chicken patty | Lettuce | Tomato | Pickle | Cheese
-              </p>
-            </div>
-          </li>
-          <li class="menu__item">
-            <div class="menu__item-header">
-              <h3 class="menu__item-name">Solar Fish</h3>
-              <p class="menu__item-price">$ 10</p>
-            </div>
-            <div class="menu__spacer"></div>
-            <div class="menu__item-footer">
-              <p class="menu__item-description">
-                Fried Fish | Cole Slaw | Pickle | Tartar sauce
-              </p>
-            </div>
-          </li>
-          <li class="menu__item">
-            <div class="menu__item-header">
-              <h3 class="menu__item-name">Eggs-plorer</h3>
-              <p class="menu__item-price">$ 10</p>
-            </div>
-            <div class="menu__spacer"></div>
-            <div class="menu__item-footer">
-              <p class="menu__item-description">
-                Scrambled Egg | Bacon | Lettuce | Cheese
-              </p>
-            </div>
-          </li>
-          <li class="menu__item">
-            <div class="menu__item-header">
-              <h3 class="menu__item-name">
-                Pluto-bean
-                <span
-                  ><img
-                    class="menu__veggie-sign"
-                    src="./images/veggie-sign.png"
-                    alt="Green Leaf Sign for Vegetarian"
-                /></span>
-              </h3>
-              <p class="menu__item-price">$ 10</p>
-            </div>
-            <div class="menu__spacer"></div>
-            <div class="menu__item-footer">
-              <p class="menu__item-description">
-                Bean patty | Lettuce | Tomato | Onion | Pickle | Cheese
-              </p>
-            </div>
-          </li>
-        </ul>
+        <ul class="menu__list"></ul>
       </div>
       <div class="menu__footer">
         <p class="menu__footer-text">
@@ -223,10 +142,11 @@
         </div>
 
         <div class="calendar__schedule">
-          <p class="calendar__month">
-            <span class="calendar__month-switch">&#8678;</span> May
-            <span class="calendar__month-switch">&#8680;</span>
-          </p>
+          <div class="calendar__month">
+            <button class="calendar__month-switch-b">&#8678;</button>
+            <span class="calendar__month-name"></span>
+            <button class="calendar__month-switch-f">&#8680;</button>
+          </div>
           <ul class="calendar__list">
             <li class="calendar__event">
               <h3 class="calendar__event-name">Festival Outdoor</h3>
@@ -360,6 +280,28 @@
         </ul>
       </div>
     </footer>
+
+    <template class="menu__template">
+      <li class="menu__item">
+        <div class="menu__item-header">
+          <div class="menu__item-title">
+            <h3 class="menu__item-name"></h3>
+            <span
+              ><img
+                class="menu__veggie-sign"
+                src="./images/veggie-sign.png"
+                alt="Green Leaf Sign for Vegetarian"
+            /></span>
+          </div>
+
+          <p class="menu__item-price"></p>
+        </div>
+        <div class="menu__spacer"></div>
+        <div class="menu__item-footer">
+          <p class="menu__item-description"></p>
+        </div>
+      </li>
+    </template>
   </body>
 
   <script type="module" src="./scripts/script.js"></script>
