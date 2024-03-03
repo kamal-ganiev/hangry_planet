@@ -158,15 +158,9 @@
 
     <section class="review">
       <h2 class="review__title">What people say about us</h2>
-      <div class="review__content">
-        <div class="review__text-container">
-          <p class="review__text">
-            Best burgers in town! Stuff is amazing and friendly, food is fresh
-            and tasty.
-          </p>
-        </div>
-        <p class="review__author">Katty P</p>
-      </div>
+      <span class="review__arrow-b">&#10094;</span>
+      <div class="review__content"><!-- Review generates by script --></div>
+      <span class="review__arrow-f">&#10095;</span>
       <p class="review__footer">
         You can leave your thoughts and ideas below! Or just leave us a
         feedback.
@@ -180,7 +174,9 @@
         business lunches and baby showers!
       </p>
       <div class="contact__buttons">
-        <a class="contact__email contact__button" href="#"
+        <a
+          class="contact__email contact__button"
+          href="mailto:hangryplanetfoodtruck@gmail.com"
           ><span class="contact__button-text">Email Us</span></a
         >
         <p class="contact__spacer">or</p>
@@ -259,6 +255,13 @@
           <p class="calendar__event-address"></p>
         </div>
       </li>
+    </template>
+
+    <template class="review__template">
+      <div class="review__text-container">
+        <p class="review__text"></p>
+      </div>
+      <p class="review__author"></p>
     </template>
   </body>
 

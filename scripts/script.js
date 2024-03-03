@@ -3,6 +3,7 @@ import {
   breakfastList,
   sidesList,
   listOfEvents,
+  reviewsArray,
 } from "./constantArrayLists.js";
 
 const date = new Date();
@@ -198,3 +199,42 @@ eventForward.addEventListener("click", () => {
     eventForward.style = "display: inline";
   }
 });
+
+const reviewContainer = document.querySelector(".review__content");
+const reviewTemplate = document.querySelector(".review__template").content;
+
+const reviewForwardButton = document.querySelector(".review__arrow-f");
+const reviewBackwardButton = document.querySelector(".review__arrow-b");
+
+function postReview(data) {
+  reviewContainer.innerHTML = "";
+
+  const newReview = reviewTemplate.cloneNode(true);
+
+  const reviewContent = newReview.querySelector(".review__text");
+  const reviewAuthor = newReview.querySelector(".review__author");
+
+  reviewContent.textContent = data.review;
+  reviewAuthor.textContent = data.author;
+
+  reviewContainer.appendChild(newReview);
+}
+
+postReview(reviewsArray[1]);
+
+function reviewSlideForward() {
+  const firstEl = reviewsArray.shift();
+  reviewsArray.push(firstEl);
+
+  postReview(reviewsArray[1]);
+}
+
+function reviewSlideBackward() {
+  const lastEl = reviewsArray.pop();
+  reviewsArray.unshift(lastEl);
+
+  postReview(reviewsArray[1]);
+}
+
+reviewForwardButton.addEventListener("click", () => reviewSlideForward());
+reviewBackwardButton.addEventListener("click", () => reviewSlideBackward());

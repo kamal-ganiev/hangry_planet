@@ -1,4 +1,5 @@
 .review {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   background-color: #eb8046;
@@ -43,4 +44,36 @@
   margin: 100px auto 0;
   text-align: center;
   font-size: 1.1em;
+}
+
+.review__arrow-b,
+.review__arrow-f {
+  font-size: 5em;
+  position: absolute;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.review__arrow-b {
+  top: 50%;
+  left: 10%;
+
+  transform: translateY(-50%);
+}
+
+.review__arrow-f {
+  top: 50%;
+  right: 10%;
+
+  transform: translateY(-50%);
+}
+
+.review__arrow-b:hover {
+  transform: translate(-5px, -50%);
+}
+
+.review__arrow-f:hover {
+  transform: translate(5px, -50%);
 }

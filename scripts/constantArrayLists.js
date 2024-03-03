@@ -311,4 +311,62 @@ const listOfEvents = [
   },
 ];
 
-export { burgersList, sidesList, breakfastList, listOfEvents };
+const reviewsArray = [
+  {
+    author: "Amy Johnson",
+    review:
+      "Delicious burgers! The food truck offers a great variety of mouthwatering burgers. The patties are juicy, and the toppings are fresh. A must-try for burger enthusiasts!",
+  },
+  {
+    author: "Chris Martinez",
+    review:
+      "Fantastic food truck experience! The burgers are cooked to perfection, and the flavors are amazing. Quick service and friendly staff make it a top choice for a quick and satisfying meal in Columbus.",
+  },
+  {
+    author: "David Anderson",
+    review:
+      "Best burgers in town! The food truck's commitment to quality ingredients shines through in every bite. The menu is creative, and the staff is always welcoming. I'll definitely be back for more.",
+  },
+  {
+    author: "Emily Turner",
+    review:
+      "Impressive variety! Whether you're a meat lover or a vegetarian, this food truck has a burger for you. The diverse menu and the excellent taste make it a standout in the Columbus food scene.",
+  },
+  {
+    author: "Greg Mitchell",
+    review:
+      "A hidden gem on wheels! The burger options are not only tasty but also reasonably priced. The food truck's mobility makes it convenient to catch wherever you are in Columbus. Highly recommended!",
+  },
+  {
+    author: "Isabella Lopez",
+    review:
+      "Satisfying every craving! The food truck's burgers are a perfect balance of flavors. The buns are soft, and the toppings are generous. It's become my go-to spot for a delicious and quick meal.",
+  },
+  {
+    author: "Kevin Thompson",
+    review:
+      "Exceptional service and flavor! The staff at this burger food truck are friendly and efficient. The burgers are consistently delicious, making it a reliable choice for a tasty meal on the go in Columbus.",
+  },
+  {
+    author: "Megan Patel",
+    review:
+      "Incredible taste, affordable prices! The food truck delivers big on flavor without breaking the bank. I appreciate the attention to detail in each burger. A definite must-try for anyone in Columbus.",
+  },
+  {
+    author: "Nathan Clark",
+    review:
+      "Burger perfection! This food truck has mastered the art of burger-making. The combination of quality ingredients and skilled preparation results in a delightful culinary experience. I can't get enough of their burgers!",
+  },
+  {
+    author: "Olivia Taylor",
+    review:
+      "Top-notch quality! The burgers from this food truck are consistently delicious. The attention to detail in the cooking process and the use of fresh ingredients set it apart from the rest. A Columbus favorite!",
+  },
+  {
+    author: "Katty Powell",
+    review:
+      "Best burgers in town! Stuff is amazing and friendly, food is fresh and tasty.",
+  },
+];
+
+export { burgersList, sidesList, breakfastList, listOfEvents, reviewsArray };
