@@ -5,18 +5,48 @@ import {
   listOfEvents,
   reviewsArray,
 } from "./constantArrayLists.js";
+import { switchMenu, toggleSwitch } from "./utils.js";
 
 const date = new Date();
+
+// Constants for header
 
 const header = document.querySelector(".header");
 const headerBackground = document.querySelector(".header__background");
 const logo = document.querySelector(".header__logo-contaner");
 const headerTitle = document.querySelector(".header__title");
 
+// Constants for menu
+
 const menuContainer = document.querySelector(".menu__list");
 const menuTemplate = document.querySelector(".menu__template").content;
 const menuNavbar = document.querySelector(".menu__nav");
 const menuNavItems = document.querySelectorAll(".menu__nav-item");
+
+// Constants for calendar
+
+const month = document.querySelector(".calendar__month");
+const monthName = month.querySelector(".calendar__month-name");
+let monthNum = date.getMonth();
+let currentMonth = listOfEvents[monthNum].month;
+
+const eventBack = month.querySelector(".calendar__month-switch-b");
+const eventForward = month.querySelector(".calendar__month-switch-f");
+
+monthName.textContent = currentMonth;
+
+const calendarList = document.querySelector(".calendar__list");
+const calendarTemplate = document.querySelector(".calendar__template").content;
+
+// Constants for review
+
+const reviewContainer = document.querySelector(".review__content");
+const reviewTemplate = document.querySelector(".review__template").content;
+
+const reviewForwardButton = document.querySelector(".review__arrow-f");
+const reviewBackwardButton = document.querySelector(".review__arrow-b");
+
+// Header shrinking function
 
 function shrinkHeader() {
   if (document.body.scrollTop > 72 || document.documentElement.scrollTop > 72) {
@@ -40,83 +70,85 @@ window.onscroll = () => {
   shrinkHeader();
 };
 
-function switchMenu(list) {
-  list.forEach((item) => {
-    const newCard = menuTemplate.cloneNode(true);
+// Menu functions calls
 
-    const cardName = newCard.querySelector(".menu__item-name");
-    const cardPrice = newCard.querySelector(".menu__item-price");
-    const cardDescription = newCard.querySelector(".menu__item-description");
-    const cardIsVeg = newCard.querySelector(".menu__veggie-sign");
-
-    cardName.textContent = item.name;
-    cardPrice.textContent = item.price;
-    cardDescription.textContent = item.ingredients;
-    if (item.isVeg) {
-      cardIsVeg.style = "display: block";
-    } else {
-      cardIsVeg.style = "display: none";
-    }
-
-    menuContainer.appendChild(newCard);
-  });
-}
-
-switchMenu(burgersList);
-
-function toggleSwitch(list, target) {
-  list.forEach((e) => {
-    e.children[0].classList.remove("menu__nav-checkbox-checked");
-    e.children[0].children[0].classList.remove(
-      "menu__nav-checkbox-inner_visible"
-    );
-  });
-
-  target.children[0].classList.add("menu__nav-checkbox-checked");
-  target.children[0].children[0].classList.add(
-    "menu__nav-checkbox-inner_visible"
-  );
-}
+switchMenu(
+  burgersList,
+  ".menu__item-name",
+  ".menu__item-price",
+  ".menu__item-description",
+  ".menu__veggie-sign",
+  menuContainer,
+  menuTemplate
+);
 
 menuNavbar.children[0].addEventListener("click", (e) => {
   e.stopPropagation();
   e.target;
   menuContainer.innerHTML = "";
-  switchMenu(burgersList);
+  switchMenu(
+    burgersList,
+    ".menu__item-name",
+    ".menu__item-price",
+    ".menu__item-description",
+    ".menu__veggie-sign",
+    menuContainer,
+    menuTemplate
+  );
 
-  toggleSwitch(menuNavItems, e.target);
+  toggleSwitch(
+    menuNavItems,
+    e.target,
+    "menu__nav-checkbox-checked",
+    "menu__nav-checkbox-inner_visible"
+  );
 });
 
 menuNavbar.children[1].addEventListener("click", (e) => {
   e.stopPropagation();
   e.target;
   menuContainer.innerHTML = "";
-  switchMenu(breakfastList);
+  switchMenu(
+    breakfastList,
+    ".menu__item-name",
+    ".menu__item-price",
+    ".menu__item-description",
+    ".menu__veggie-sign",
+    menuContainer,
+    menuTemplate
+  );
 
-  toggleSwitch(menuNavItems, e.target);
+  toggleSwitch(
+    menuNavItems,
+    e.target,
+    "menu__nav-checkbox-checked",
+    "menu__nav-checkbox-inner_visible"
+  );
 });
 
 menuNavbar.children[2].addEventListener("click", (e) => {
   e.stopPropagation();
   e.target;
   menuContainer.innerHTML = "";
-  switchMenu(sidesList);
+  switchMenu(
+    sidesList,
+    ".menu__item-name",
+    ".menu__item-price",
+    ".menu__item-description",
+    ".menu__veggie-sign",
+    menuContainer,
+    menuTemplate
+  );
 
-  toggleSwitch(menuNavItems, e.target);
+  toggleSwitch(
+    menuNavItems,
+    e.target,
+    "menu__nav-checkbox-checked",
+    "menu__nav-checkbox-inner_visible"
+  );
 });
 
-const month = document.querySelector(".calendar__month");
-const monthName = month.querySelector(".calendar__month-name");
-let monthNum = date.getMonth();
-let currentMonth = listOfEvents[monthNum].month;
-
-const eventBack = month.querySelector(".calendar__month-switch-b");
-const eventForward = month.querySelector(".calendar__month-switch-f");
-
-monthName.textContent = currentMonth;
-
-const calendarList = document.querySelector(".calendar__list");
-const calendarTemplate = document.querySelector(".calendar__template").content;
+// Calendar functions calls
 
 function switchCalendar(list) {
   list.forEach((item) => {
@@ -200,11 +232,7 @@ eventForward.addEventListener("click", () => {
   }
 });
 
-const reviewContainer = document.querySelector(".review__content");
-const reviewTemplate = document.querySelector(".review__template").content;
-
-const reviewForwardButton = document.querySelector(".review__arrow-f");
-const reviewBackwardButton = document.querySelector(".review__arrow-b");
+// Review functions calls
 
 function postReview(data) {
   reviewContainer.innerHTML = "";
