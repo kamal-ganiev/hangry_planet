@@ -67,3 +67,20 @@
 .contact__button:hover .contact__button-text::after {
   width: 100%;
 }
+
+@media screen and (max-width: 1350px) {
+  .contact__buttons {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact__description {
+    width: 70%;
+  }
+
+  .contact__button {
+    width: 250px;
+    height: 90px;
+  }
+}

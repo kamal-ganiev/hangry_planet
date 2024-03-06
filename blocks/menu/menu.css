@@ -182,3 +182,24 @@
 
   transform: rotate(-10deg);
 }
+
+@media screen and (max-width: 1000px) {
+  .menu__halal-sign {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .menu {
+    padding: 50px 10px;
+  }
+  .menu__content {
+   width: 100%;
+  }
+
+  .menu__nav {
+    margin-bottom: 50px;
+    gap: 25px;
+  }
+}

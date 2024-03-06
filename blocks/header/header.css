@@ -7,7 +7,7 @@
   color: white;
   padding: 25px 70px 50px;
 
-  z-index: 2;
+  z-index: 3;
 
   transition: 0.5s;
 }
@@ -67,4 +67,19 @@
 
 .header__title_disable {
   display: none;
+}
+
+@media screen and (max-width: 550px) {
+  .header__logo-contaner {
+    width: 80%;
+  }
+
+  .header__logo_shrinked {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .header_shrinked {
+    height: 80px;
+  }
 }

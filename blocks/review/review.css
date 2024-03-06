@@ -77,3 +77,21 @@
 .review__arrow-f:hover {
   transform: translate(5px, -50%);
 }
+
+@media screen and (max-width: 550px) {
+  .review {
+    padding: 50px 0 15px;
+
+    font-size: 10px;
+  }
+  .review__title {
+    margin-bottom: 50px;
+  }
+  .review__arrow-b, .review__arrow-f {
+    display: none;
+  }
+
+  .review__content {
+    width: 90%;
+  }
+}

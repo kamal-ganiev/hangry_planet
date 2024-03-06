@@ -33,3 +33,9 @@
 .nav__item:hover .nav__item::after {
   width: 100%;
 }
+
+@media screen and (max-width: 750px) {
+  .nav {
+    display: none;
+  }
+}

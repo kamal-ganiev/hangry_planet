@@ -167,16 +167,20 @@ function switchCalendar(list) {
     cardAddress.textContent = item.eventAddress;
 
     cardContainer.addEventListener("click", () => {
-      calendarCover.textContent = `Loading ${item.eventName}...`;
-      calendarMap.src = "";
-      setTimeout(() => {
-        calendarMap.src = `https://www.google.com/maps?&q=${item.eventAddress}, Columbus, OH&output=embed`
-      }, 200);
-      
-    });
-    
+      if (window.innerWidth >= 1200) {
+        calendarCover.textContent = `Loading ${item.eventName}...`;
+        calendarMap.src = "";
+        setTimeout(() => {
+          calendarMap.src = `https://www.google.com/maps?&q=${item.eventAddress}, Columbus, OH&output=embed`
+        }, 200);
+      }
+      else {
+        window.open(`http://maps.google.com/?q=${item.eventAddress}`, "_blank");
+      }})
+
+  
     calendarList.appendChild(newCard);
-  });
+  })
 }
 
 switchCalendar(listOfEvents[monthNum].data);
