@@ -49,7 +49,7 @@ const reviewBackwardButton = document.querySelector(".review__arrow-b");
 // Header shrinking function
 
 function shrinkHeader() {
-  if (document.body.scrollTop > 72 || document.documentElement.scrollTop > 72) {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     headerTitle.classList.add("header__title_disappear");
     header.classList.add("header_shrinked");
     headerBackground.classList.add("header__background_shrinked");
@@ -150,6 +150,9 @@ menuNavbar.children[2].addEventListener("click", (e) => {
 
 // Calendar functions calls
 
+const calendarMap = document.querySelector(".calendar__embeded-map");
+const calendarCover = document.querySelector(".calendar__map-cover");
+
 function switchCalendar(list) {
   list.forEach((item) => {
     const newCard = calendarTemplate.cloneNode(true);
@@ -157,11 +160,21 @@ function switchCalendar(list) {
     const cardName = newCard.querySelector(".calendar__event-name");
     const cardAddress = newCard.querySelector(".calendar__event-address");
     const cardDate = newCard.querySelector(".calendar__event-date");
+    const cardContainer = newCard.querySelector(".calendar__event");
 
     cardName.textContent = item.eventName;
     cardDate.textContent = item.eventDate;
     cardAddress.textContent = item.eventAddress;
 
+    cardContainer.addEventListener("click", () => {
+      calendarCover.textContent = `Loading ${item.eventName}...`;
+      calendarMap.src = "";
+      setTimeout(() => {
+        calendarMap.src = `https://www.google.com/maps?&q=${item.eventAddress}, Columbus, OH&output=embed`
+      }, 200);
+      
+    });
+    
     calendarList.appendChild(newCard);
   });
 }

@@ -28,9 +28,11 @@
 }
 
 .calendar__map {
+  position: relative;
   width: 500px;
   height: 500px;
-  background-color: white;
+  background-color: #2A2A2A;
+  color: white;
   border-radius: 25px;
   border: solid 2px #eb8046;
 
@@ -42,9 +44,15 @@
 }
 
 .calendar__embeded-map {
+  z-index: 2;
   min-width: 102%;
   height: 101%;
   border: none;
+}
+
+.calendar__map-cover {
+  position: absolute;
+  font-size: 2em;
 }
 
 .calendar__list {
