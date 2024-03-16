@@ -42,13 +42,7 @@
             class="header__logo_animated"
             type="image/svg+xml"
             data="./images/animated_logo.svg"
-          >
-            <!-- <img
-              class="header__logo"
-              src="./images/animated_logo.svg"
-              alt="Hangry Planet Logo"
-            /> -->
-          </object>
+          ></object>
           <h1 class="header__title">First Ever UFO Burgers in O-H-I-O!</h1>
         </div>
       </header>
@@ -60,20 +54,23 @@
           First Burgers from out-of-world for Ohioans in Columbus.
         </h2>
         <p class="about__description">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus
-          deleniti velit dolorem beatae culpa consequuntur totam officiis sit
-          maiores eaque itaque a, consectetur officia ex incidunt at. Veritatis,
-          fugit aperiam. Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Itaque repellendus, cumque assumenda ipsum eius maiores
-          consequatur accusantium autem reprehenderit facilis quam odit iste
-          iure sint laborum nostrum quis voluptatem blanditiis?
+          Welcome to Hangry Planet! We're a family-owned business bringing
+          cosmic flavors to your neighborhood with our UFO-styled burgers. Using
+          fresh, local ingredients and secret recipes, every bite is a taste of
+          the galaxy. Come join us on our food truck for an out-of-this-world
+          culinary experience that's sure to leave you craving more!
         </p>
       </div>
       <div class="about__content">
-        <ul class="about__list">
+        <!-- <ul class="about__list">
           <li class="about__image"></li>
           <li class="about__image"></li>
-        </ul>
+        </ul> -->
+        <object
+          class="about__logo_animated"
+          type="image/svg+xml"
+          data="./images/animated_logo.svg"
+        ></object>
       </div>
     </section>
 
@@ -127,6 +124,7 @@
     <section class="calendar" id="calendar">
       <h2 class="calendar__title">Catch Us Up!</h2>
       <p class="calendar__subtitle">Check out our schedule to find us!</p>
+      <!-- Temporarly unavailable
       <div class="calendar__content">
         <div class="calendar__map">
           <iframe
@@ -148,9 +146,17 @@
             <button class="calendar__month-switch-f">&#8680;</button>
           </div>
           <ul class="calendar__list">
-            <!-- Calendar list generates by script -->
           </ul>
-        </div>
+        </div> -->
+      <div class="calendar__map-embedded">
+        <iframe
+          class="calendar__embed"
+          src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&bgcolor=%23ffffff&showTitle=0&showDate=0&showTabs=0&showPrint=0&showCalendars=0&showTz=0&src=ODQ5NjBiOWVmYjdhZTlhMDBlNTM0ZmM1N2M1YjI1MTRmOWIwMDA3NDUwNjkwNGRhN2E1ZDdjODJkNzgzMzUxY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4uaXNsYW1pYyNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23EF6C00&color=%230B8043&color=%234285F4"
+          style="border-width: 0"
+          frameborder="0"
+          scrolling="no"
+        >
+        </iframe>
       </div>
     </section>
 
@@ -185,38 +191,38 @@
     </section>
 
     <footer class="footer">
-        <ul class="footer__social">
-          <p class="footer__title">Follow our adventure</p>
-          <li class="footer__social-content">
-            <a class="footer__social-link" href="#"
-              ><img class="footer__social-icon" src="./images/instagram.svg" />
-              <span class="footer__social-text">Instagram</span></a
-            >
-          </li>
-          <li class="footer__social-content">
-            <a class="footer__social-link" href="#"
-              ><img class="footer__social-icon" src="./images/facebook.svg" />
-              <span class="footer__social-text">Facebook</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="footer__contact">
-          <p class="footer__title">Contact us!</p>
-          <li class="footer__contact-info">
-            <a
-              class="footer__contact-link"
-              href="mailto:hangryplanetfoodtruck@gmail.com"
-              >+1 (xxx) xxx-xxxx</a
-            >
-          </li>
-          <li class="footer__contact-info">
-            <a
-              class="footer__contact-link"
-              href="mailto:hangryplanetfoodtruck@gmail.com"
-              >hangryplanetfoodtruck@gmail.com</a
-            >
-          </li>
-        </ul>
+      <ul class="footer__social">
+        <p class="footer__title">Follow our adventure</p>
+        <li class="footer__social-content">
+          <a class="footer__social-link" href="#"
+            ><img class="footer__social-icon" src="./images/instagram.svg" />
+            <span class="footer__social-text">Instagram</span></a
+          >
+        </li>
+        <li class="footer__social-content">
+          <a class="footer__social-link" href="#"
+            ><img class="footer__social-icon" src="./images/facebook.svg" />
+            <span class="footer__social-text">Facebook</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="footer__contact">
+        <p class="footer__title">Contact us!</p>
+        <li class="footer__contact-info">
+          <a
+            class="footer__contact-link"
+            href="mailto:hangryplanetfoodtruck@gmail.com"
+            >+1 (929) 204-1519
+          </a>
+        </li>
+        <li class="footer__contact-info">
+          <a
+            class="footer__contact-link"
+            href="mailto:hangryplanetfoodtruck@gmail.com"
+            >hangryplanetfoodtruck@gmail.com
+          </a>
+        </li>
+      </ul>
     </footer>
 
     <template class="menu__template">

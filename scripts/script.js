@@ -25,18 +25,18 @@ const menuNavItems = document.querySelectorAll(".menu__nav-item");
 
 // Constants for calendar
 
-const month = document.querySelector(".calendar__month");
-const monthName = month.querySelector(".calendar__month-name");
-let monthNum = date.getMonth();
-let currentMonth = listOfEvents[monthNum].month;
+// const month = document.querySelector(".calendar__month");
+// const monthName = month.querySelector(".calendar__month-name");
+// let monthNum = date.getMonth();
+// let currentMonth = listOfEvents[monthNum].month;
 
-const eventBack = month.querySelector(".calendar__month-switch-b");
-const eventForward = month.querySelector(".calendar__month-switch-f");
+// const eventBack = month.querySelector(".calendar__month-switch-b");
+// const eventForward = month.querySelector(".calendar__month-switch-f");
 
-monthName.textContent = currentMonth;
+// monthName.textContent = currentMonth;
 
-const calendarList = document.querySelector(".calendar__list");
-const calendarTemplate = document.querySelector(".calendar__template").content;
+// const calendarList = document.querySelector(".calendar__list");
+// const calendarTemplate = document.querySelector(".calendar__template").content;
 
 // Constants for review
 
@@ -150,104 +150,104 @@ menuNavbar.children[2].addEventListener("click", (e) => {
 
 // Calendar functions calls
 
-const calendarMap = document.querySelector(".calendar__embeded-map");
-const calendarCover = document.querySelector(".calendar__map-cover");
+// const calendarMap = document.querySelector(".calendar__embeded-map");
+// const calendarCover = document.querySelector(".calendar__map-cover");
 
-function switchCalendar(list) {
-  list.forEach((item) => {
-    const newCard = calendarTemplate.cloneNode(true);
+// function switchCalendar(list) {
+//   list.forEach((item) => {
+//     const newCard = calendarTemplate.cloneNode(true);
 
-    const cardName = newCard.querySelector(".calendar__event-name");
-    const cardAddress = newCard.querySelector(".calendar__event-address");
-    const cardDate = newCard.querySelector(".calendar__event-date");
-    const cardContainer = newCard.querySelector(".calendar__event");
+//     const cardName = newCard.querySelector(".calendar__event-name");
+//     const cardAddress = newCard.querySelector(".calendar__event-address");
+//     const cardDate = newCard.querySelector(".calendar__event-date");
+//     const cardContainer = newCard.querySelector(".calendar__event");
 
-    cardName.textContent = item.eventName;
-    cardDate.textContent = item.eventDate;
-    cardAddress.textContent = item.eventAddress;
+//     cardName.textContent = item.eventName;
+//     cardDate.textContent = item.eventDate;
+//     cardAddress.textContent = item.eventAddress;
 
-    cardContainer.addEventListener("click", () => {
-      if (window.innerWidth >= 1200) {
-        calendarCover.textContent = `Loading ${item.eventName}...`;
-        calendarMap.src = "";
-        setTimeout(() => {
-          calendarMap.src = `https://www.google.com/maps?&q=${item.eventAddress}, Columbus, OH&output=embed`
-        }, 200);
-      }
-      else {
-        window.open(`http://maps.google.com/?q=${item.eventAddress}`, "_blank");
-      }})
+//     cardContainer.addEventListener("click", () => {
+//       if (window.innerWidth >= 1200) {
+//         calendarCover.textContent = `Loading ${item.eventName}...`;
+//         calendarMap.src = "";
+//         setTimeout(() => {
+//           calendarMap.src = `https://www.google.com/maps?&q=${item.eventAddress}, Columbus, OH&output=embed`
+//         }, 200);
+//       }
+//       else {
+//         window.open(`http://maps.google.com/?q=${item.eventAddress}`, "_blank");
+//       }})
 
   
-    calendarList.appendChild(newCard);
-  })
-}
+//     calendarList.appendChild(newCard);
+//   })
+// }
 
-switchCalendar(listOfEvents[monthNum].data);
+// switchCalendar(listOfEvents[monthNum].data);
 
-if (listOfEvents[monthNum].data.length === 0) {
-  calendarList.innerHTML = `
-        <li class="calendar__message">
-            There's no events for this month &#128542;
-        </li>`;
-}
+// if (listOfEvents[monthNum].data.length === 0) {
+//   calendarList.innerHTML = `
+//         <li class="calendar__message">
+//             There's no events for this month &#128542;
+//         </li>`;
+// }
 
-if (monthNum === 0) {
-  eventBack.style = "display: none";
-  monthNum = 0;
-} else if (monthNum === 12) {
-  eventForward.style = "display: none";
-  monthNum = 12;
-} else {
-  eventBack.style = "display: inline";
-  eventForward.style = "display: inline";
-}
+// if (monthNum === 0) {
+//   eventBack.style = "display: none";
+//   monthNum = 0;
+// } else if (monthNum === 12) {
+//   eventForward.style = "display: none";
+//   monthNum = 12;
+// } else {
+//   eventBack.style = "display: inline";
+//   eventForward.style = "display: inline";
+// }
 
-eventBack.addEventListener("click", () => {
-  monthNum -= 1;
+// eventBack.addEventListener("click", () => {
+//   monthNum -= 1;
 
-  monthName.textContent = listOfEvents[monthNum].month;
+//   monthName.textContent = listOfEvents[monthNum].month;
 
-  calendarList.innerHTML = "";
-  switchCalendar(listOfEvents[monthNum].data);
+//   calendarList.innerHTML = "";
+//   switchCalendar(listOfEvents[monthNum].data);
 
-  if (listOfEvents[monthNum].data.length === 0) {
-    calendarList.innerHTML = `
-        <li class="calendar__message">
-            There's no events for this month &#128542;
-        </li>`;
-  }
+//   if (listOfEvents[monthNum].data.length === 0) {
+//     calendarList.innerHTML = `
+//         <li class="calendar__message">
+//             There's no events for this month &#128542;
+//         </li>`;
+//   }
 
-  if (monthNum === 0) {
-    eventBack.style = "display: none";
-  } else {
-    eventBack.style = "display: inline";
-    eventForward.style = "display: inline";
-  }
-});
+//   if (monthNum === 0) {
+//     eventBack.style = "display: none";
+//   } else {
+//     eventBack.style = "display: inline";
+//     eventForward.style = "display: inline";
+//   }
+// });
 
-eventForward.addEventListener("click", () => {
-  monthNum += 1;
+// eventForward.addEventListener("click", () => {
+//   monthNum += 1;
 
-  monthName.textContent = listOfEvents[monthNum].month;
+//   monthName.textContent = listOfEvents[monthNum].month;
 
-  calendarList.innerHTML = "";
-  switchCalendar(listOfEvents[monthNum].data);
+//   calendarList.innerHTML = "";
+//   switchCalendar(listOfEvents[monthNum].data);
 
-  if (listOfEvents[monthNum].data.length === 0) {
-    calendarList.innerHTML = `
-        <li class="calendar__message">
-            There's no events for this month &#128542;
-        </li>`;
-  }
+//   if (listOfEvents[monthNum].data.length === 0) {
+//     calendarList.innerHTML = `
+//         <li class="calendar__message">
+//             There's no events for this month &#128542;
+//         </li>`;
+//   }
 
-  if (monthNum === 11) {
-    eventForward.style = "display: none";
-  } else {
-    eventBack.style = "display: inline";
-    eventForward.style = "display: inline";
-  }
-});
+//   if (monthNum === 11) {
+//     eventForward.style = "display: none";
+//   } else {
+//     eventBack.style = "display: inline";
+//     eventForward.style = "display: inline";
+//   }
+// });
 
 // Review functions calls
 

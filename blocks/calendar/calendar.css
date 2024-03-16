@@ -140,6 +140,19 @@
   font-size: 1.5em;
 }
 
+.calendar__map-embedded {
+  margin: 50px auto;
+  border: #eb8046 2px solid;
+  overflow: hidden;
+  width: 70%;
+  height: 70%;
+}
+
+.calendar__embed {
+  width: 100%;
+  height: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .calendar__map {
     display: none;
