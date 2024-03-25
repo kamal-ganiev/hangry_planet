@@ -4,7 +4,7 @@ const burgersList = [
   {
     name: "The Big Bang",
     price: "$ 13",
-    ingredients: "Pulled Beef | Lettuce | Tomato | Onion | Pickle | Cheese",
+    ingredients: "Shredded Beef | Lettuce | Tomato | Onion | Pickle | Cheese",
     isVeg: false,
   },
   {
@@ -26,16 +26,16 @@ const burgersList = [
     isVeg: false,
   },
   {
-    name: "Eggs-plorer",
-    price: "$ 11",
-    ingredients: "Scrambled Egg | Bacon | Lettuce | Cheese",
-    isVeg: false,
-  },
-  {
     name: "Pluto-bean",
     price: "$ 10",
     ingredients: "Bean patty | Lettuce | Tomato | Onion | Pickle | Cheese",
     isVeg: true,
+  },
+  {
+    name: "Make it Combo",
+    price: "+$ 5",
+    ingredients: "Add fries and your choice of drink",
+    isVeg: false,
   },
 ];
 
@@ -43,7 +43,7 @@ const sidesList = [
   {
     name: "French Fries",
     price: "$ 7",
-    ingredients: "Made with Potatoes from K-245L, aka Idaho!",
+    ingredients: "",
     isVeg: true,
   },
   {
@@ -55,13 +55,13 @@ const sidesList = [
   {
     name: "Chicken Nuggets",
     price: "$ 10",
-    ingredients: "Does it fly? Does it shine?",
+    ingredients: "",
     isVeg: false,
   },
   {
     name: "Beverages",
     price: "$ 2",
-    ingredients: "There is no fish in the cans, I promise...",
+    ingredients: "",
     isVeg: false,
   },
 ];
@@ -70,19 +70,19 @@ const breakfastList = [
   {
     name: "Eggs-plorer",
     price: "$ 11",
-    ingredients: "Scrambled egg | Bacon | Lettuce | Cheese",
+    ingredients: "Scrambled eggs | Bacon | Greens | Tomato | Cheese",
     isVeg: false,
   },
   {
     name: "Salmon Way",
     price: "$ 12",
-    ingredients: "Smoked Salmon | Tomato | Arugula | Cream cheese",
+    ingredients: "Smoked Salmon | Tomato | Greens | Cream cheese",
     isVeg: false,
   },
   {
     name: "Coffee",
     price: "$ 2",
-    ingredients: "Energy that can turn back on the Sun",
+    ingredients: "",
     isVeg: false,
   },
 ];

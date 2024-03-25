@@ -49,15 +49,16 @@ const reviewBackwardButton = document.querySelector(".review__arrow-b");
 // Header shrinking function
 
 function shrinkHeader() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
     headerTitle.classList.add("header__title_disappear");
     header.classList.add("header_shrinked");
-    headerBackground.classList.add("header__background_shrinked");
     logo.classList.add("header__logo_shrinked");
     headerTitle.classList.add("header__title_disable");
   } else {
     header.classList.remove("header_shrinked");
-    headerBackground.classList.remove("header__background_shrinked");
     logo.classList.remove("header__logo_shrinked");
     headerTitle.classList.remove("header__title_disappear");
     setTimeout(() => {
@@ -178,7 +179,6 @@ menuNavbar.children[2].addEventListener("click", (e) => {
 //         window.open(`http://maps.google.com/?q=${item.eventAddress}`, "_blank");
 //       }})
 
-  
 //     calendarList.appendChild(newCard);
 //   })
 // }
