@@ -281,5 +281,7 @@ function reviewSlideBackward() {
   postReview(reviewsArray[1]);
 }
 
+reviewContainer.addEventListener("click", () => reviewSlideForward());
+
 reviewForwardButton.addEventListener("click", () => reviewSlideForward());
 reviewBackwardButton.addEventListener("click", () => reviewSlideBackward());
