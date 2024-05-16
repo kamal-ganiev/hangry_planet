@@ -9,6 +9,10 @@ import { switchMenu, toggleSwitch } from "./utils.js";
 
 const date = new Date();
 
+// Constant for Section
+
+const sections = document.querySelectorAll(".section");
+
 // Constants for header
 
 const header = document.querySelector(".header");
@@ -285,3 +289,21 @@ reviewContainer.addEventListener("click", () => reviewSlideForward());
 
 reviewForwardButton.addEventListener("click", () => reviewSlideForward());
 reviewBackwardButton.addEventListener("click", () => reviewSlideBackward());
+
+const options = {
+  root: null,
+  threshold: 0.2,
+  rootMargin: "0px",
+};
+
+const observer = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+}, options);
+
+sections.forEach((section) => {
+  observer.observe(section);
+});
